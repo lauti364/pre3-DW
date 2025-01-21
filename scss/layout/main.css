@@ -1,0 +1,20 @@
+main img {
+  width: 100%;
+  margin: 0px;
+  display: block;
+  height: 100%;
+}
+
+main h1 {
+  position: absolute;
+  color: #f5f5dc;
+  font-size: 3rem;
+  background-color: #1d1d1d;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+main {
+  position: relative;
+  width: auto;
+}/*# sourceMappingURL=main.css.map */

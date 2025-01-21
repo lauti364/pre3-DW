@@ -1,0 +1,26 @@
+main {
+    &.gallery-container {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      flex-grow: 1;
+    }
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .photo {
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+  }
+  

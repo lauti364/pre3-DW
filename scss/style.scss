@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    padding: 0;;background-color: #474838;overflow-x: hidden;width: 100%;display: flex;flex-direction: column;min-height: 100vh;
+}
+//layouts
+@import"./layout/footer.scss";
+@import"./layout/header.scss";
+@import"./layout/main.scss";
+@import"./layout/body.scss";
+//pages
+@import"./pages-scss/menus.scss";
+@import"./pages-scss/index.scss";
+@import"./pages-scss/nosotros.scss";
+@import"./pages-scss/gallery.scss";
+@import"./pages-scss/contact.scss";

@@ -1,0 +1,11 @@
+.mainc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  background-color: black;
+}
+
+.contact-container {
+  border: 2px solid black;
+}/*# sourceMappingURL=contact.css.map */
