@@ -3,9 +3,11 @@
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  background-color: black;
+  border-radius: 1px;
 }
 
-.contact-container {
-  border: 2px solid black;
+@media (max-width: 768px) {
+  .contact-container {
+    border-color: aquamarine;
+  }
 }/*# sourceMappingURL=contact.css.map */

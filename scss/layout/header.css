@@ -12,7 +12,8 @@ header {
 header img {
   height: 50px;
   width: auto;
-  margin-right: 20px;
+  margin-right: 0px;
+  margin-left: 0px;
 }
 header nav ul {
   display: flex;
@@ -40,4 +41,37 @@ header nav ul li a {
 }
 header nav ul li a:hover {
   color: #f0a500;
+}
+
+@media (max-width: 768px) {
+  header {
+    width: 100%;
+    margin: 0px;
+    flex-direction: column;
+    align-items: center;
+    padding: 1px;
+    justify-content: center;
+  }
+  header nav ul {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header nav ul li {
+    margin: 1px 0;
+    padding: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header nav ul li a {
+    font-size: 1.2rem;
+  }
+  header img {
+    margin-top: 2px;
+    margin-left: 1px;
+  }
 }/*# sourceMappingURL=header.css.map */

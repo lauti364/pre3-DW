@@ -1,1 +1,33 @@
-/*# sourceMappingURL=index.css.map */
+.info {
+  text-align: center;
+  align-items: center;
+  width: 33%;
+  background-color: #474838;
+  color: beige;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 2px solid rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.info:hover {
+  background-color: rgb(0, 0, 0);
+}
+
+.info-c {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0;
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  .info {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}/*# sourceMappingURL=index.css.map */

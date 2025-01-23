@@ -1,1 +1,78 @@
-/*# sourceMappingURL=nosotros.css.map */
+body {
+  overflow-x: hidden;
+}
+
+.main-content {
+  margin: 0;
+  padding: 0;
+}
+
+.c-quienessomos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.c-quienessomos .image-text {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.c-quienessomos .image-text img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 2rem;
+}
+.c-quienessomos .image-text .text {
+  flex: 2;
+  padding: 1rem;
+  min-width: 250px;
+}
+.c-quienessomos .image-text .text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.c-quienessomos .image-text .text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+.c-quienessomos:nth-child(even) .image-text {
+  flex-direction: row-reverse;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .c-quienessomos {
+    flex-direction: column;
+    align-items: center;
+  }
+  .c-quienessomos .image-text {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .c-quienessomos .image-text img {
+    margin-right: 0;
+    margin-bottom: 1rem;
+    max-width: 100%;
+  }
+  .c-quienessomos .image-text .text {
+    flex: 1;
+    text-align: center;
+    padding: 1rem;
+  }
+}/*# sourceMappingURL=nosotros.css.map */
