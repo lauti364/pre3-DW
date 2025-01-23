@@ -31,12 +31,23 @@ main {
 }
 
 
-
 @media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
 
+  
+  .gallery {
+    grid-template-columns: repeat(3, 1fr); 
+  }
 
   .photo {
     width: 100%; 
-    height: 100%; 
+    height: 200px;
+    
+    img {
+      height: 100%; 
+      object-fit: cover;
+    }
   }
 }

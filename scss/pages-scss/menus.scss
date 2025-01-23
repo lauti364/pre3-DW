@@ -69,6 +69,6 @@ nav ul li a:hover {
 @media (max-width: 768px) {
 
   .card-madre{display: flex; flex-direction: column;justify-content: center;align-items: center;}
-
+header{flex-direction: column !important;}
 
 }
