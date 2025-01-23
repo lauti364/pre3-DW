@@ -4,10 +4,12 @@
   align-items: center;
   flex-grow: 1;
   border-radius: 1px;
+  background-image: url(../../multimedia/fotocombifondo.jfif);
 }
 
 @media (max-width: 768px) {
   .contact-container {
     border-color: aquamarine;
+    border-radius: 1px;
   }
 }/*# sourceMappingURL=contact.css.map */

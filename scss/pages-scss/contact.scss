@@ -1,11 +1,12 @@
-.mainc {
+.mainc { img {object-fit: cover};
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-grow: 1;border-radius: 1px;
-  }
+    flex-grow: 1;border-radius: 1px;background-image: url(../../multimedia/fotocombifondo.jfif);
+  }; .contact-container {  p  {color: white;}} h2  {color: white;}
 
-  @media (max-width: 768px) {
+
+  @media (max-width: 768px) { .mainc{background-image: none} 
   .contact-container {
-    border-color: aquamarine;
+    border-color: aquamarine;border-radius: 1px;
   }}

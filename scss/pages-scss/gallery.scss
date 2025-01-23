@@ -16,11 +16,17 @@ main {
 }
 
 .photo {
-  img {object-fit: cover;
+  img {
+    object-fit: cover;
     width: 100%;
     height: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border 0.3s ease, box-shadow 0.3s ease; 
+    &:hover {
+      border: 3px solid #f0a500;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);  transform: scale(1); 
+    }
   }
 }
 
@@ -30,7 +36,7 @@ main {
 
 
   .photo {
-    width: 70%; 
-    height: 70%; 
+    width: 100%; 
+    height: 100%; 
   }
 }

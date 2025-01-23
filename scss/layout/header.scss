@@ -49,7 +49,9 @@ header {
     }
   }
   @media (max-width: 768px) {
-    header {width: 100%;    margin: 0px;
+    header {
+      width: 100%;
+      margin: 0;
       flex-direction: column;
       align-items: center;
       padding: 1px;
@@ -65,21 +67,25 @@ header {
           align-items: center;
   
           li {
-            margin: 1px 0;
-            padding: 1px;
+            margin: 2px 0;
+            padding: 0px;
             display: flex;
             justify-content: center;
             align-items: center;
+            width: 100%;
   
             a {
+              text-align: center; 
               font-size: 1.2rem;
+              display: inline-block;
+              width: 100%;
             }
           }
         }
       }
   
       img {
-        margin-top: 2px;
-        margin-left: 1px;
+        margin-top: 0px;
       }
-    }}
+    }
+  }

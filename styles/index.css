@@ -35,7 +35,8 @@ header {
 header img {
   height: 50px;
   width: auto;
-  margin-right: 20px;
+  margin-right: 0px;
+  margin-left: 0px;
 }
 header nav ul {
   display: flex;
@@ -68,7 +69,7 @@ header nav ul li a:hover {
 @media (max-width: 768px) {
   header {
     width: 100%;
-    margin: 0px;
+    margin: 0;
     flex-direction: column;
     align-items: center;
     padding: 1px;
@@ -83,18 +84,21 @@ header nav ul li a:hover {
     align-items: center;
   }
   header nav ul li {
-    margin: 1px 0;
-    padding: 1px;
+    margin: 2px 0;
+    padding: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }
   header nav ul li a {
+    text-align: center;
     font-size: 1.2rem;
+    display: inline-block;
+    width: 100%;
   }
   header img {
-    margin-top: 2px;
-    margin-left: 1px;
+    margin-top: 0px;
   }
 }
 main img {
@@ -141,24 +145,6 @@ body {
   padding: 0;
   background-color: #474838;
   overflow-x: hidden;
-}
-
-header {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 5px 5px;
-  background-color: beige;
-  color: #474838;
-  width: 100%;
-  box-sizing: border-box;
-  margin-bottom: 0px;
-}
-
-header img {
-  height: 50px;
-  width: auto;
-  margin-right: 20px;
 }
 
 nav ul {
@@ -229,40 +215,6 @@ footer {
 
 /*mobile*/
 @media (max-width: 768px) {
-  header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1px;
-    justify-content: center;
-  }
-  header nav ul {
-    flex-direction: column;
-    width: 100%;
-    margin-top: 1px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  nav ul li {
-    margin: 1px 0;
-    margin-top: 1px;
-    padding: 1px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  nav ul li a {
-    font-size: 1.2rem;
-  }
-  header img {
-    margin-top: 2px;
-    margin-left: 1px;
-  }
-  .info {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
   .card-madre {
     display: flex;
     flex-direction: column;
@@ -326,13 +278,15 @@ body {
   flex-wrap: wrap;
 }
 .c-quienessomos .image-text img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  flex: 1;
+  object-fit: cover;
   margin-right: 2rem;
+  max-width: 50%;
 }
 .c-quienessomos .image-text .text {
   flex: 2;
+  color: beige;
   padding: 1rem;
   min-width: 250px;
 }
@@ -344,16 +298,8 @@ body {
   font-size: 1.1rem;
   line-height: 1.6;
 }
-.c-quienessomos:nth-child(even) .image-text {
+.c-quienessomos .image-text .text:nth-child(even) .image-text {
   flex-direction: row-reverse;
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #333;
-  color: white;
-  font-size: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -399,21 +345,49 @@ main.gallery-container {
   object-fit: cover;
   width: 100%;
   height: 100%;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+.photo img:hover {
+  border: 3px solid #f0a500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1);
 }
 
+@media screen and (max-width: 768px) {
+  .photo {
+    width: 100%;
+    height: 100%;
+  }
+}
 .mainc {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
   border-radius: 1px;
+  background-image: url(../../multimedia/fotocombifondo.jfif);
+}
+.mainc img {
+  object-fit: cover;
+}
+
+.contact-container p {
+  color: white;
+}
+
+h2 {
+  color: white;
 }
 
 @media (max-width: 768px) {
+  .mainc {
+    background-image: none;
+  }
   .contact-container {
     border-color: aquamarine;
+    border-radius: 1px;
   }
 }
 
