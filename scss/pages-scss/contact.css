@@ -1,15 +1,78 @@
 .mainc {
   display: flex;
+  background-image: url(../../multimedia/fotocombifondo.jfif);
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  border-radius: 1px;
-  background-image: url(../../multimedia/fotocombifondo.jfif);
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+.mainc .containerco {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.mainc .contact-container {
+  background: rgba(255, 252, 252, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  border: 2px solid rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.mainc .contact-container h2 {
+  color: rgb(16, 5, 5);
+  margin-bottom: 10px;
+}
+.mainc .contact-container p {
+  color: rgb(73, 72, 72);
+  margin: 5px;
+}
+.mainc .contact-container textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background: transparent;
+  color: rgb(0, 0, 0);
+  min-height: 40px;
+  resize: none;
+  text-align: center;
+}
+.mainc .contact-container textarea:focus {
+  outline: none;
+  border-color: rgb(0, 0, 0);
+}
+.mainc .contact-container button {
+  background: beige;
+  color: black;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s;
+}
+.mainc .contact-container button:hover {
+  background: white;
+  color: black;
 }
 
 @media (max-width: 768px) {
+  .mainc {
+    background-image: none;
+  }
   .contact-container {
     border-color: aquamarine;
-    border-radius: 1px;
+    border-radius: 10px;
   }
 }/*# sourceMappingURL=contact.css.map */

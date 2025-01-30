@@ -45,9 +45,12 @@ header nav ul li a:hover {
 
 @media (max-width: 768px) {
   header {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     width: 100%;
-    margin: 0px;
-    flex-direction: column;
+    margin: 0;
+    flex-direction: column !important;
     align-items: center;
     padding: 1px;
     justify-content: center;
@@ -61,17 +64,20 @@ header nav ul li a:hover {
     align-items: center;
   }
   header nav ul li {
-    margin: 1px 0;
-    padding: 1px;
+    margin: 2px 0;
+    padding: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }
   header nav ul li a {
+    text-align: center;
     font-size: 1.2rem;
+    display: inline-block;
+    width: 100%;
   }
   header img {
-    margin-top: 2px;
-    margin-left: 1px;
+    margin-top: 0px;
   }
 }/*# sourceMappingURL=header.css.map */

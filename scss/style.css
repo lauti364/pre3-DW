@@ -68,9 +68,12 @@ header nav ul li a:hover {
 
 @media (max-width: 768px) {
   header {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     width: 100%;
-    margin: 0px;
-    flex-direction: column;
+    margin: 0;
+    flex-direction: column !important;
     align-items: center;
     padding: 1px;
     justify-content: center;
@@ -84,18 +87,21 @@ header nav ul li a:hover {
     align-items: center;
   }
   header nav ul li {
-    margin: 1px 0;
-    padding: 1px;
+    margin: 2px 0;
+    padding: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }
   header nav ul li a {
+    text-align: center;
     font-size: 1.2rem;
+    display: inline-block;
+    width: 100%;
   }
   header img {
-    margin-top: 2px;
-    margin-left: 1px;
+    margin-top: 0px;
   }
 }
 main img {
@@ -142,48 +148,6 @@ body {
   padding: 0;
   background-color: #474838;
   overflow-x: hidden;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  align-items: center;
-  justify-content: stretch;
-}
-
-nav ul li {
-  margin-left: 20px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #474838;
-  font-weight: bold;
-  display: block;
-  font-size: 1rem;
-  width: 100%;
-}
-
-nav ul li a:hover {
-  color: #f0a500;
-}
-
-footer {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f5f5dc;
-  padding: 5px;
-  margin: 0px;
-  color: #474838;
 }
 
 .card-madre {
@@ -277,13 +241,15 @@ body {
 }
 .c-quienessomos .image-text img {
   width: 100%;
-  height: 100%;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
   margin-right: 2rem;
+  max-width: 50%;
 }
 .c-quienessomos .image-text .text {
   flex: 2;
+  color: beige;
   padding: 1rem;
   min-width: 250px;
 }
@@ -295,16 +261,8 @@ body {
   font-size: 1.1rem;
   line-height: 1.6;
 }
-.c-quienessomos:nth-child(even) .image-text {
+.c-quienessomos .image-text .text:nth-child(even) .image-text {
   flex-direction: row-reverse;
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #333;
-  color: white;
-  font-size: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -351,14 +309,28 @@ main.gallery-container {
      object-fit: cover;
   width: 100%;
   height: 100%;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+.photo img:hover {
+  border: 3px solid #f0a500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1);
 }
 
-@media screen and (max-width: 768px) {
-  .photo {
-    width: 70%;
-    height: 70%;
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 100%;
+    grid-gap: 10px;
+    margin-top: 40px;
+  }
+}
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 100%;
   }
 }
 .mainc {
@@ -366,12 +338,75 @@ main.gallery-container {
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  border-radius: 1px;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+.mainc .containerco {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.mainc .contact-container {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  border: 2px solid aquamarine;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.mainc .contact-container h2 {
+  color: rgb(16, 5, 5);
+  margin-bottom: 10px;
+}
+.mainc .contact-container p {
+  color: rgb(73, 72, 72);
+  margin: 5px;
+}
+.mainc .contact-container textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background: transparent;
+  color: rgb(20, 13, 207);
+  min-height: 40px;
+  resize: none;
+  text-align: center;
+}
+.mainc .contact-container textarea:focus {
+  outline: none;
+  border-color: aquamarine;
+}
+.mainc .contact-container button {
+  background: aquamarine;
+  color: black;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s;
+}
+.mainc .contact-container button:hover {
+  background: white;
+  color: black;
 }
 
 @media (max-width: 768px) {
+  .mainc {
+    background-image: none;
+  }
   .contact-container {
     border-color: aquamarine;
-    border-radius: 1px;
+    border-radius: 10px;
   }
 }/*# sourceMappingURL=style.css.map */

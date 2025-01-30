@@ -36,10 +36,8 @@ main {
 
 @media (max-width: 768px) {
   .gallery {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     max-width: 100%;
-    grid-gap: 10px;
-    margin-top: 40px;
   }
 }
 

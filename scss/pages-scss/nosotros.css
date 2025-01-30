@@ -22,13 +22,15 @@ body {
 }
 .c-quienessomos .image-text img {
   width: 100%;
-  height: 100%;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
   margin-right: 2rem;
+  max-width: 50%;
 }
 .c-quienessomos .image-text .text {
   flex: 2;
+  color: beige;
   padding: 1rem;
   min-width: 250px;
 }
@@ -40,16 +42,8 @@ body {
   font-size: 1.1rem;
   line-height: 1.6;
 }
-.c-quienessomos:nth-child(even) .image-text {
+.c-quienessomos .image-text .text:nth-child(even) .image-text {
   flex-direction: row-reverse;
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #333;
-  color: white;
-  font-size: 1rem;
 }
 
 @media (max-width: 768px) {
